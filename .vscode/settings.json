@@ -1,0 +1,10 @@
+{
+    "files.exclude": {
+        "main.aux": true,
+        "main.bbl": true,
+        "main.blg": true,
+        "main.out": true,
+        "main.synctex.gz": true,
+        "main.toc": true
+    }
+}

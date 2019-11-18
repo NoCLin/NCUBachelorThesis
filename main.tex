@@ -1,0 +1,491 @@
+\def\thelstlisting{}
+
+%不需要区分奇偶页的请使用下面一行
+\documentclass[a4paper,AutoFakeBold,oneside,12pt]{book}
+%需要区分奇偶页的（即每一章第一页一定在奇数页上）请使用下面一行
+%\documentclass[a4paper,AutoFakeBold,openright,12pt]{book}
+\usepackage{BUPTthesisbachelor}
+\usepackage{setspace}
+
+%\lstdefinestyle{sharpc}{language=[Sharp]C, frame=lrtb, rulecolor=\color{blue!80!black}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Begin Documents %%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+
+
+
+% 中文摘要
+\begin{titlepage}
+\pagenumbering{Roman}
+\setcounter{page}{1}
+\thispagestyle{empty}
+\clearpage\phantomsection\addcontentsline{toc}{chapter}{摘要}
+    \begin{spacing}{1.05}
+        \centering
+        % 如果你的标题太长，可能会换行；如果你对换行位置不满意，请调节下面第一个{}的参数
+        \parbox[c]{.75\textwidth}{\thesistitlefont{这只是另一个论文标题而已}}
+    \end{spacing}
+
+   
+    \begin{spacing}{1.5}
+        \centering
+        \songti\wuhao\quad{} \\ 
+
+        \begin{tabular}{clcl} 
+            专\quad{}\quad{}业：& 软件工程 &
+            学\quad{}\quad{}号：& 0123456789 \\ 
+            学生姓名：& 某某人 &
+            指导教师：& 某某人
+        \end{tabular} 
+
+        \quad{} \\ 
+        \centering
+        \abszhname{摘\quad{}要}
+    \end{spacing}
+
+
+    \xiaosanhao\quad{}
+
+    \normalsize
+{
+这是中文摘要的部分。
+
+它可以拥有多段。
+这是中文摘要的部分。
+
+它可以拥有多段。
+
+如果你写的太长，甚至可以到第二页。
+}
+    
+
+    \quad{}
+
+    \par\noindent\abszhkey{关键词：}\quad{}%
+    \abszhkeys{关键词1\quad{}%
+    关键词2\quad{}%
+    关键词3\quad{}%
+    关键词4\quad{}%
+    关键词5}%
+
+
+% Abstract
+    \clearpage\phantomsection\addcontentsline{toc}{chapter}{Abstract}
+	\thispagestyle{empty}
+    \begin{spacing}{1.05}
+        \centering
+        % 如果你的标题太长，可能会换行；如果你对换行位置不满意，请调节下面第一个{}的参数
+        \parbox[c]{.75\textwidth}{\thesistitleenfont{Just another title}
+        }
+    \end{spacing}
+
+    \begin{spacing}{1.5}
+        \centering
+        \sanhao\quad{} \\ 
+        \abszhname{Abstract} \\ 
+    \end{spacing}
+    \xiaosanhao\quad{}
+    \normalsize
+
+{
+This is ABSTRACT.
+
+You can write more than one paragraph here.
+
+If your abstract is too long, it will take up more pages. 
+}
+    
+
+    \par\noindent\absenkey{Keyword:}\quad{}%
+    \absenkeys{KeyWord1\quad{}%
+    KeyWord2;\quad{}%
+    KeyWord3;\quad{}%
+    KeyWord4;\quad{}%
+    KeyWord5}%
+
+\end{titlepage}
+
+
+\tableofcontents % Content
+\thispagestyle{empty}
+
+% FIXME: 去除目录页页码
+
+% 正文
+\pagenumbering{arabic}
+\newpage\mainmatter
+\fancypagestyle{plain}{\pagestyle{mainmatter}}
+%\let\cleardoublepagebak=\cleardoublepage
+%\let\cleardoublepage\relax % Make new chapter stay on old page
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Main Area %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{基础模块示例}
+
+% 如果你的项目来源于科研项目，可以使用以下指令插入无编号脚注于正文第一页
+\blfootnote{本项目来源于科研项目“基于\LaTeX{}的本科毕业设计”，项目编号1124}
+
+\section{特殊文本类型}
+\subsection{脚注}
+社交媒体是一种供用户创建在线社群来分享信息、观点、个人信息和其它内容（如视频）的电子化交流平台，社交网络服务（social network service, SNS）和微博客（microblogging）都属于社交媒体的范畴\cite{webster_social_media}，国外较为知名的有Facebook\footnote{http://www.facebook.com/}、Instagram\footnote{https://www.instagram.com/}、Twitter\footnote{http://www.twitter.com/}、LinkedIn\footnote{http://www.linkedin.com/}等，国内较为知名的有新浪微博\footnote{http://www.weibo.com/}。
+
+在社交媒体的强覆盖下，新闻信息的传播渠道也悄然了发生变化。\cite{false_news_spread_2018}
+
+\subsection{定义、定理与引理等}
+\begin{definition}
+这是一条我也不知道在说什么的定义，反正我就是写在这里做个样子罢了，也没人会仔细读。\cite{周兴2017基于深度学习的谣言检测及模式挖掘}
+\end{definition}
+
+\begin{theorem}
+这是一条我也不知道在说什么的定理，反正我就是写在这里做个样子罢了，也没人会仔细读。
+\end{theorem}
+
+\begin{axiom}
+这是一条我也不知道在说什么的公理，反正我就是写在这里做个样子罢了，也没人会仔细读。
+\end{axiom}
+
+\begin{lemma}
+这是一条我也不知道在说什么的引理，反正我就是写在这里做个样子罢了，也没人会仔细读。
+\end{lemma}
+
+\begin{proposition}
+这是一条我也不知道在说什么的命题，反正我就是写在这里做个样子罢了，也没人会仔细读。
+\end{proposition}
+
+\begin{corollary}
+这是一条我也不知道在说什么的推论，反正我就是写在这里做个样子罢了，也没人会仔细读。
+\end{corollary}
+
+\subsection{中英文文献、学位论文引用}
+根据美国皮尤研究中心的2017年9月发布的调查结果\cite{pew_news_use_2017}，67\%的美国民众会从社交媒体上获取新闻信息，其中高使用频率用户占20\%。在国内，中国互联网信息中心《2016年中国互联网新闻市场研究报告》\cite{internet_news_2016}也显示，社交媒体已逐渐成为新闻获取、评论、转发、跳转的重要渠道，在2016年下半年，曾经通过社交媒体获取过新闻资讯的用户比例高达90.7\%，在微信、微博等社交媒体参与新闻评论的比例分别为62.8\%和50.2\%。社交媒体正在成为网络上热门事件生成并发酵的源头，在形成传播影响力后带动传统媒体跟进报道，最终形成更大规模的舆论浪潮。\cite{Yang2012Automatic}
+
+在国内，新浪微博由于其发布方便、传播迅速、受众广泛且总量大的特点，成为了虚假信息传播的重灾区：《中国新媒体发展报告（2013）》\cite{唐绪军2013中国新媒体发展报告}显示，2012年的100件微博热点舆情案例中，有超过1/3出现谣言；《中国新媒体发展报告（2015）》\cite{唐绪军2015中国新媒体发展报告}对2014年传播较广、比较典型的92条假新闻进行了多维度分析，发现有59\%的虚假新闻首发于新浪微博。
+
+此等信息的传播严重损害了有关公众人物的名誉权，降低了社交媒体服务商的商业美誉度，扰乱了网络空间秩序，冲击着网民的认知，极易对民众造成误导，带来诸多麻烦和经济损失，甚至会导致社会秩序的混乱。针对社交媒体谣言采取行动成为了有关部门、服务提供商和广大民众的共同选择。\cite{周兴2017基于深度学习的谣言检测及模式挖掘}
+
+\section{图表及其引用}
+此处引用了简单的表\ref{crowdwisdom_TMP}。
+
+请注意，\LaTeX{}的图表排版规则决定了图表\textbf{不一定会乖乖呆在你插入的地方}，这是为了避免Word中由于图片尺寸不匹配在页面下部出现的的空白，所以请不要使用“下图”“下表”作为指向文字，应使用“图1-1所示”这样的表述。
+
+\begin{bupttable}{基于浏览者行为的特征}{crowdwisdom_TMP}
+
+    \begin{tabular}{l|l|l}
+		\hline \textbf{特征} & \textbf{描述} & \textbf{形式与理论范围}\\
+		\hline 点赞量 & 微博的点赞数量 & 数值，$\mathbb{N}$ \\
+		\hline 评论量 & 微博的评论数量 & 数值，$\mathbb{N}$ \\
+		\hline 转发量 & 微博的转发数量 & 数值，$\mathbb{N}$ \\
+		\hline
+    \end{tabular}
+\end{bupttable}
+
+此处引用了复杂的表\ref{complexcrowdwisdom_TMP}。
+
+
+\begin{bupttable}{基于浏览者行为的复杂特征}{complexcrowdwisdom_TMP}
+    \begin{tabular}{l|l|l|l}
+        \hline
+        \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{类别}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{特征}}} & \multicolumn{2}{c}{\textbf{不知道叫什么的表头}} \\
+        \cline{3-4}
+        & & \multicolumn{1}{c|}{\textbf{描述}} & \multicolumn{1}{c}{\textbf{形式与理论范围}} \\
+        \hline
+        \multirow{3}{*}{正常互动} & 点赞量 & 微博的点赞数量 & 数值，$\mathbb{N}$ \\
+        \cline{2-4}
+        & 评论量 & 微博的评论数量 & 数值，$\mathbb{N}$ \\
+        \cline{2-4}
+        & 转发量 & 微博的转发数量 & 数值，$\mathbb{N}$ \\
+        \hline
+        非正常互动 & 羡慕量 & 微博的羡慕数量 & 数值，$\mathbb{N}$ \\
+        \hline
+    \end{tabular}
+\end{bupttable}
+
+此处展示了更专业的表\ref{tab:abbr_table}，一个好的表格没有竖线。
+% 请注意1）tabularx环境对多行文本的处理；2）booktabs宏包中支持的更粗的顶端和底端表格边界线，边界线与文本间更大的间距。
+\begin{bupttable}{红警2名词解释}{tab:abbr_table}
+    \begin{tabularx}{\textwidth}{llX}
+        \toprule
+        \textbf{术语类别} & \textbf{缩略语} & \textbf{解释} \\ \midrule
+        & 兵营 & 兵营（Barracks），《命令与征服\ 红色警戒2：尤里的复仇》游戏中的一种生产建筑，用以生产步兵单位 \\ \cmidrule(l){2-3}
+        & 建造场 & 建造场（Construction Yard），《命令与征服\ 红色警戒2：尤里的复仇》游戏中的一种基础建筑，用以支持其他建筑的建造 \\ \cmidrule(l){2-3}
+        & 矿厂 & 矿石精炼厂（Ore Refinery），《命令与征服\ 红色警戒2：尤里的复仇》游戏中的一种资源建筑，用以将矿车采集的矿石转化为游戏资金 \\ \cmidrule(l){2-3}
+        游戏 & 空指 & 空指部（Airforce Command Headquarters），《命令与征服\ 红色警戒2：尤里的复仇》游戏中的一种资源建筑，用以提供雷达功能和T2科技及生产部分空军单位 \\ \cmidrule(l){2-3}
+        & 相机 & 游戏术语，特指游戏内的观察区域和视角 \\ \cmidrule(l){2-3}
+        & 重工 & 战车工厂（War Factory），《命令与征服\ 红色警戒2：尤里的复仇》游戏中的一种生产建筑，用以生产载具单位 \\ \cmidrule(l){2-3}
+        & 战争迷雾 & 游戏术语，《命令与征服\ 红色警戒2：尤里的复仇》中指黑色的未探索区域 \\ \bottomrule
+    \end{tabularx}
+\end{bupttable}
+
+此处引用了一张图。图\ref{autoencoder_TMP}表示的是一个由含有4个神经元的输入层、含有3个神经元的隐藏层和含有4个神经元的输出层组成的自编码器，$+1$代表偏置项。
+
+%图片宽度设置为文本宽度的75%，可以调整为合适的比例
+\buptfigure[width=0.7\textwidth]{pictures/autoencoder}{自编码器结构}{autoencoder_TMP}
+
+%组图示例，已按照指导手册要求设计，由于子图数量不同，无法压缩成\buptfigure那样，大家对照示例即可
+\begin{figure}[!htbp]
+    \centering
+    \subfloat[]{ %[]对齐方式，t为top，b为bottom，留空即可
+	\label{Fig:R1} % 子图1标签名
+    	\includegraphics[width=0.45\textwidth]{pictures/autoencoder} %插入图片命令，格式为[配置]{图片路径}
+    }
+    \quad %空格
+    \subfloat[]{
+	\label{Fig:R2} % 子图2标签名
+    	\includegraphics[width=0.45\textwidth]{pictures/autoencoder}
+    }
+    \caption{这是两个自编码器结构，我就是排一下子图的效果：\protect\subref{Fig:R1}左边的自编码器，\protect\subref{Fig:R2}右边的自编码器} %注意须使用\protect\subref{}进行标号引用
+    \label{Fig:RecAccuracy} % 整个组图的标签名
+\end{figure}
+
+\section{公式与算法表示}
+
+\subsection{例子：基于主成分分析}
+
+\subsubsection{主成分分析算法}
+
+下面对主成分分析进行介绍。
+
+主成分分析是一种简单的机器学习算法，其功能可以从两方面解释：一方面可以认为它提供了一种压缩数据的方式，另一方面也可以认为它是一种学习数据表示的无监督学习算法。\cite{Goodfellow2016DeepLearning}
+通过PCA，我们可以得到一个恰当的超平面及一个投影矩阵，通过投影矩阵，样本点将被投影在这一超平面上，且满足最大可分性（投影后样本点的方差最大化），直观上讲，也就是能尽可能分开。
+
+对中心化后的样本点集$\bm{X}=\{\bm{x}_1,\bm{x}_2,\ldots,\bm{x}_i,\ldots,\bm{x}_m\}$（有$\sum_{i=1}^{m}\bm{x}_i = 0$），考虑将其最大可分地投影到新坐标系\ $\bm{W}= \{\bm{w}_1,\bm{w}_2,\ldots,\bm{w}_i,\ldots,\bm{w}_d\} $，其中$\bm{w}_i$是标准正交基向量，满足$\|\bm{w}_i\|_2 = 1$， $\bm{w}_i^T\bm{w}_j = 0$（$i \not= j$）。假设我们需要$d^\prime$（$d^\prime < d$）个主成分，那么样本点$\bm{x}_i$在低维坐标系中的投影是$\bm{z}_i = (z_{i1};z_{i2};\ldots;z_{id^\prime})$，其中$z_{ij} = \bm{w}_j^\mathrm{T}\bm{x}_i$，是$\bm{x}_i$在低维坐标系下第$j$维的坐标。
+对整个样本集，投影后样本点的方差是
+\begin{equation}
+\begin{aligned}
+    & \frac{1}{m}\sum_{i=1}^m \bm{z}_i^\mathrm{T}\bm{z}_i \\
+= & \frac{1}{m}\sum_{i=1}^m (\bm{x}_i^\mathrm{T}\bm{W})^\mathrm{T}(\bm{x}_i^\mathrm{T}\bm{W}) \\
+= & \frac{1}{m}\sum_{i=1}^m \bm{W}^\mathrm{T}\bm{x}_i\bm{x}_i^\mathrm{T}\bm{W} \\
+= & \frac{1}{m} \bm{W}^\mathrm{T}\bm{X}\bm{X}^\mathrm{T}\bm{W} \\
+\end{aligned}
+\end{equation}
+
+由于我们知道新坐标系$\bm{W}$的列向量是标准正交基向量，且样本点集$\bm{X}$已经过中心化，则PCA的优化目标可以写为
+\begin{equation}
+\label{PCA_goal_TMP}
+\begin{aligned}
+& \max_{\substack{\bm{W}}}  &  tr(\bm{W}^\mathrm{T}\bm{X}\bm{X}^ \mathrm{T}\bm{W}) \\
+& \operatorname{ s.t. }  &  \bm{W}^\mathrm{T}\bm{W} = \bm{I} \\
+\end{aligned}
+\end{equation}
+
+由于$\bm{X}\bm{X}^ \mathrm{ T }$是协方差矩阵，那么只需对它做特征值分解，即
+\begin{equation}
+\label{PCA_eigenvalue}
+\bm{X}^ \mathrm{ T }\bm{X} = \bm{W}\bm{\Lambda}\bm{W}^ \mathrm{ T } \\
+\end{equation}
+其中$\bm{\Lambda}=diag(\bm{\lambda})$，$\bm{\lambda} = \{\lambda_1,\lambda_2,\ldots,\lambda_m\}$。
+
+具体地，考虑到它是半正定矩阵的二次型，存在最大值，可对\eqref{PCA_goal_TMP}使用拉格朗日乘数法
+\begin{equation}
+\bm{X}\bm{X}^ \mathrm{ T }\bm{w}_i  = \lambda_i \bm{w}_i \\
+\end{equation}
+
+之后将求得的特征值降序排列，取前$d^\prime$个特征值对应的特征向量组成所需的投影矩阵$\bm{W}^\prime =(\bm{w}_1,\bm{w}_2,\ldots,\bm{w}_{d^\prime})$，即可得到PCA的解。PCA算法的描述如算法\ref{PCA_algorithm}所示。
+
+\begin{algorithm} 
+	\begin{spacing}{1.3}
+		\floatname{algorithm}{算法}
+		\caption{主成分分析（PCA）} 
+		\label{PCA_algorithm}
+		\renewcommand{\algorithmicrequire}{\textbf{输入：}}
+		\renewcommand{\algorithmicensure}{\textbf{输出：}} 
+		\begin{algorithmic}[1] 
+			\Require 样本集$\bm{x}=\{\bm{x}_1,\bm{x}_2,\ldots,\bm{x}_i,\ldots,\bm{x}_m\}$，低维空间维数$d^\prime$ 
+			\Ensure 投影矩阵  $\bm{W}^\prime =(\bm{w}_1,\bm{w}_2,\ldots,\bm{w}_{d^\prime})$
+			\State 对所有样本中心化$\bm{x}_i \gets \bm{x}_i - \frac{1}{m}\sum_{i=1}^m \bm{x}_i$
+			\State  计算样本的协方差$\bm{X}\bm{X}^ \mathrm{T}$
+			\State 对协方差矩阵$\bm{X}\bm{X}^ \mathrm{T}$做特征值分解
+			\State 取最大的$d^\prime$个特征值所对应的特征向量$\bm{w}_1,\bm{w}_2,\ldots,\bm{w}_{d^\prime}$
+		\end{algorithmic}  
+	\end{spacing}
+\end{algorithm}
+
+\subsubsection{主成分分析可信度评估方法}
+记待判定微博$\bm{w}_0$的经典特征向量为$\bm{f}^{c}_{0}$，它的发布者在$\bm{w_0}$前发布的$k$条微博为$\bm{W} = \bm{w}_1,\bm{w}_2,\ldots,\bm{w}_k$，这$k$条微博对应的经典特征向量集为$\bm{F}^{c}_{W} = \{ \bm{f}^{c}_{1},\bm{f}^{c}_{2},\ldots,\bm{f}^{c}_{k} \}$。令$label = 1$代表谣言，$label = 0$代表非谣言。算法的具体流程如算法\ref{PCA_model}所示。
+
+\begin{algorithm}
+	\begin{spacing}{1.3}
+		\floatname{algorithm}{算法}
+		\caption{基于PCA的信息可信度评估} 
+		\label{PCA_model}
+		\renewcommand{\algorithmicrequire}{\textbf{输入：}}
+		\renewcommand{\algorithmicensure}{\textbf{输出：}} 
+			\begin{algorithmic}[1] 
+				\Require $\bm{f}^{c}_{0}$，$\bm{F}^{c}_{W}$，保留主成分数$n$
+				\Ensure 标签$label\in \{0,1\}$
+				\State 对所有特征向量应用PCA，保留前$n$个主成分$\bm{o}^{c}_{i} \gets PCA(\bm{f}^{c}_{i}, n)$（$i = 0,1,\ldots,k$）
+				\State 计算$\bm{F}^{c}_{W}$中各向量的平均距离$\mu$和标准差$\sigma$
+				\State 计算阈值$thr = {\mu} / {\sigma}$
+				\If {$\min_{1<j\le k} \|\bm{o}^{c}_{0} - \bm{o}^{c}_{j} \|_2 > thr$}
+					\State $ label \gets 1 $
+				\Else
+					\State $ label \gets 0 $
+				\EndIf
+			\end{algorithmic}
+	\end{spacing}
+\end{algorithm}
+
+\section{代码表示}
+
+%据悉以下语言被lstlisting支持：Awk, bash, Basi4, C#, C++, C, Delphi, erlang, Fortran, GCL, Haskell, HTML, Java, JVMIS, Lisp, Logo, Lua, make, Mathematica, Matlab, Objective C , Octave, Pascal, Perl, PHP, Prolog,  Python, R, Ruby, SAS, Scilab, sh, SHELXL, Simula, SQL, tcl, TeX, VBScript, Verilog, VHDL, XML, XSLT
+%遗憾的是，JavaScript不被支持，请上网搜索支持该语言的方法
+
+\subsection{直接书写代码在.tex中}
+下面的代码\ref{plus}是用Python编写的加法函数。
+
+\begin{lstlisting}[language=Python, caption=加法, label=plus, tabsize=2]  
+def plusFunc(a, b):
+	return a + b 
+\end{lstlisting}  
+
+\subsection{引用代码文件}
+下面的代码\ref{recursion}是用Python文件中引入的倒序打印$x$到$1$的函数，请查看code文件夹。
+
+\lstinputlisting[language=Python, caption=倒序打印数字, label=recursion, tabsize=2]{code/recursion.py}
+
+\section{列表样式}
+
+\subsection{使用圆点作为项目符号}
+
+\begin{itemize}
+\item \textbf{第一章为基础模块示例}，是的，本章的名字就是基础模块示例，正如你看到这个样子。
+\item \textbf{第二章为不存在}，是的，其实它不存在。
+\end{itemize}
+
+\subsection{使用数字作为项目符号}
+
+\begin{enumerate}
+\item \textbf{第一章为基础模块示例}，是的，本章的名字就是基础模块示例，正如你看到这个样子。
+\item \textbf{第二章为不存在}，是的，其实它不存在。
+\end{enumerate}
+
+\subsection{句中数字编号列表样式}
+
+\begin{enumerate*}
+    \item \textbf{第一章为基础模块示例}，是的，本章的名字就是基础模块示例，正如你看到这个样子；
+    \item \textbf{第二章为不存在}，是的，其实它不存在。
+\end{enumerate*}
+
+\chapter{为了目录撑到第二页}
+\section{我不得不再添加一点内容}
+\section{尽管这些章节一点正文都没有}
+\section{是的}
+\section{真的没有}
+\section{我已经不知道说什么了}
+\section{如果有，我们就祝愿一下学校教务处什么时候转变一下思维}
+\section{把控制格式这种事情往前做}
+\section{不要总是觉得折磨学生是合理的}
+\section{你拿着教学管理岗位的工资}
+\section{你需要折磨一下你自己才对}
+\section{不要觉得我对别人要求太高，对自己太低}
+\section{我对自己要求低的话也不至于想要修订这份模板}
+
+\clearpage\phantomsection\addcontentsline{toc}{chapter}{结\qquad{}论}
+\chapter*{结\qquad{}论}
+\normalsize
+
+结论
+
+
+%%%%%%%%%%%%%%%%%%%%%%% Main Area ENDs Here %%%%%%%%%%%%%%%%%%%%%%%%
+%\let\cleardoublepage=\cleardoublepagebak
+% Reference
+\clearpage\phantomsection\addcontentsline{toc}{chapter}{参考文献（References）}
+\bibliographystyle{buptbachelor}
+\refbodyfont{\bibliography{ref}}
+
+% Thanks to page
+\clearpage\phantomsection\addcontentsline{toc}{chapter}{致\qquad{}谢}
+\chapter*{致\qquad{}谢}
+\normalsize
+
+{
+本文使用\LaTeX{}基于NCUBachelorThesis\footnote{https://github.com/NoCLin/NCUBachelorThesis}与BUPTBachelorThesis\footnote{https://github.com/sqyx008/BUPTBachelorThesis}模板进行排版，特此表示感谢。
+}
+
+% Appendix
+\setcounter{figure}{0} 
+\renewcommand{\thefigure}{~附-\arabic{figure}~}
+\setcounter{equation}{0} 
+\renewcommand{\theequation}{~附-\arabic{equation}~}
+\setcounter{table}{0} 
+\renewcommand{\thetable}{~附-\arabic{table}~}
+\setcounter{lstlisting}{0} 
+\makeatletter
+  \renewcommand \thelstlisting
+       {附-\@arabic\c@lstlisting}
+\makeatother
+
+
+\chapter*{附\qquad{}录}
+\phantomsection\addcontentsline{toc}{chapter}{附\qquad{}录}
+
+\phantomsection
+\addcontentsline{toc}{section}{附录1\quad{}缩略语表}
+\section*{附录1\quad{}缩略语表}
+
+\begin{bupttable}{基于浏览者行为的特征}{crowdwisdom2}
+    \begin{tabular}{l|l|l}
+        \hline \textbf{特征} & \textbf{描述} & \textbf{形式与理论范围}\\
+        \hline 点赞量 & 微博的点赞数量 & 数值，$\mathbb{N}$ \\
+        \hline 评论量 & 微博的评论数量 & 数值，$\mathbb{N}$ \\
+        \hline 转发量 & 微博的转发数量 & 数值，$\mathbb{N}$ \\
+        \hline
+    \end{tabular}
+\end{bupttable}
+
+\begin{bupttable}{基于浏览者行为的复杂特征}{complexcrowdwisdom2}
+    \begin{tabular}{l|l|l|l}
+		\hline
+        \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{类别}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{特征}}} & \multicolumn{2}{c}{\textbf{不知道叫什么的表头}} \\
+        \cline{3-4}
+         & & \multicolumn{1}{c|}{\textbf{描述}} & \multicolumn{1}{c}{\textbf{形式与理论范围}} \\
+		\hline
+        \multirow{3}{*}{正常互动} & 点赞量 & 微博的点赞数量 & 数值，$\mathbb{N}$ \\
+		\cline{2-4}
+         & 评论量 & 微博的评论数量 & 数值，$\mathbb{N}$ \\
+		\cline{2-4}
+         & 转发量 & 微博的转发数量 & 数值，$\mathbb{N}$ \\
+		\hline
+        非正常互动 & 羡慕量 & 微博的羡慕数量 & 数值，$\mathbb{N}$ \\
+        \hline
+    \end{tabular}
+\end{bupttable}
+\buptfigure[width=0.15\textheight]{pictures/autoencoder}{自编码器结构}{autoencoder}
+
+\begin{lstlisting}[language=Python, caption=减法, label=minus, tabsize=2]  
+def minusFunc(a, b):
+	return a - b 
+\end{lstlisting}  
+
+\begin{equation}
+\label{PCA_goal}
+\begin{aligned}
+\max_{\substack{\bm{W}}}  &  tr(\bm{W}^\mathrm{T}\bm{X}\bm{X}^ \mathrm{T}\bm{W})
+\end{aligned}
+\end{equation}
+
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{附录2\quad{}数学符号}
+\section*{附录2\quad{}数学符号}
+\begin{center}
+	\begin{tabular}{ccc}
+		\multicolumn{2}{c}{\textbf{数和数组}} \\
+		\\
+		$a$ & 标量（整数或实数）\\
+		$\bm{a}$ & 向量\\
+		$dim()$ & 向量的维数\\
+		$\bm{A}$ & 矩阵\\
+		$\bm{A}^\mathrm{T}$ & 矩阵$\textbf{A}$的转置\\
+		$\bm{I}$ & 单位矩阵（维度依据上下文而定） \\
+ 		$diag(\bm{a})$ & 对角方阵，其中对角元素由向量$\bm{a}$确定 \\
+
+	\end{tabular}
+\end{center}
+
+
+
+\end{document}
