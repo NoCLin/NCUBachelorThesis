@@ -20,35 +20,30 @@
 \begin{titlepage}
 \pagenumbering{Roman}
 \setcounter{page}{1}
-\thispagestyle{empty}
-\clearpage\phantomsection\addcontentsline{toc}{chapter}{摘要}
-    \begin{spacing}{1.05}
+\clearpage
+\thispagestyle{abszh}
+\phantomsection\addcontentsline{toc}{chapter}{摘要}
+    \begin{spacing}{1.35}
         \centering
         % 如果你的标题太长，可能会换行；如果你对换行位置不满意，请调节下面第一个{}的参数
-        \parbox[c]{.75\textwidth}{\thesistitlefont{这只是另一个论文标题而已}}
-    \end{spacing}
-
-   
-    \begin{spacing}{1.5}
+        \parbox[c]{.75\textwidth}{\thesistitlefont{这只是另一个论文标题而已}} \\
         \centering
-        \songti\wuhao\quad{} \\ 
+        \songti\wuhao\quad\\ 
 
         \begin{tabular}{clcl} 
-            专\quad{}\quad{}业：& 软件工程 &
-            学\quad{}\quad{}号：& 0123456789 \\ 
+            专 \quad \quad 业：& 软件工程 &
+            学 \quad \quad 号：& 0123456789 \\ 
             学生姓名：& 某某人 &
             指导教师：& 某某人
         \end{tabular} 
-
-        \quad{} \\ 
+    \end{spacing}
+    \begin{spacing}{2.41}
+        \vspace{17pt minus 16.5pt}
         \centering
-        \abszhname{摘\quad{}要}
+        \abszhname{摘要}
     \end{spacing}
 
-
-    \xiaosanhao\quad{}
-
-    \normalsize
+    \vspace{16.5pt minus 16pt}\normalsize
 {
 这是中文摘要的部分。
 
@@ -59,9 +54,6 @@
 
 如果你写的太长，甚至可以到第二页。
 }
-    
-
-    \quad{}
 
     \par\noindent\abszhkey{关键词：}
     \abszhkeys{
@@ -73,22 +65,21 @@
 
 
 % Abstract
-    \clearpage\phantomsection\addcontentsline{toc}{chapter}{Abstract}
-	\thispagestyle{empty}
-    \begin{spacing}{1.05}
+    \clearpage
+    \thispagestyle{absen}
+    \phantomsection\addcontentsline{toc}{chapter}{Abstract}
+    \begin{spacing}{1.35}
         \centering
         % 如果你的标题太长，可能会换行；如果你对换行位置不满意，请调节下面第一个{}的参数
         \parbox[c]{.75\textwidth}{\thesistitleenfont{Just another title}
         }
     \end{spacing}
-
-    \begin{spacing}{1.5}
+    \begin{spacing}{2.41}
         \centering
-        \sanhao\quad{} \\ 
+        \vspace{17pt minus 16.5pt}
         \abszhname{Abstract} \\ 
     \end{spacing}
-    \xiaosanhao\quad{}
-    \normalsize
+    \vspace{16.5pt minus 16pt}\normalsize
 
 {
 This is ABSTRACT.
@@ -108,12 +99,12 @@ If your abstract is too long, it will take up more pages.
     KeyWord5
     }%
 
-\end{titlepage}
-
-
+\clearpage
+\fancypagestyle{plain}{\pagestyle{contents}}
+\pagestyle{plain}
 \tableofcontents % Content
-\thispagestyle{empty}
 
+\end{titlepage}
 % FIXME: 去除目录页页码
 
 % 正文
