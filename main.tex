@@ -5,7 +5,6 @@
 %需要区分奇偶页的（即每一章第一页一定在奇数页上）请使用下面一行
 %\documentclass[a4paper,AutoFakeBold,openright,12pt]{book}
 \usepackage{BUPTthesisbachelor}
-\usepackage{setspace}
 
 %\lstdefinestyle{sharpc}{language=[Sharp]C, frame=lrtb, rulecolor=\color{blue!80!black}}
 
@@ -13,113 +12,125 @@
 %%%%%%%%%%%%%%%%%%%%%%%%% Begin Documents %%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-
-
-
-% 中文摘要
 \begin{titlepage}
-\pagenumbering{Roman}
-\setcounter{page}{1}
+
+% Cover %
 \thispagestyle{empty}
-\clearpage\phantomsection\addcontentsline{toc}{chapter}{摘要}
-    \begin{spacing}{1.05}
-        \centering
-        % 如果你的标题太长，可能会换行；如果你对换行位置不满意，请调节下面第一个{}的参数
-        \parbox[c]{.75\textwidth}{\thesistitlefont{这只是另一个论文标题而已}}
-    \end{spacing}
+\begin{spacing}{1}
+    \covercredentialfont \hfill 密级：\underline{\makebox[4em]{公开}}
 
-   
-    \begin{spacing}{1.5}
-        \centering
-        \songti\wuhao\quad{} \\ 
+    \centering\vspace{7pt}\includegraphics[height=1.88cm, width=6.59cm]{pictures/NCU}
 
-        \begin{tabular}{clcl} 
-            专\quad{}\quad{}业：& 软件工程 &
-            学\quad{}\quad{}号：& 0123456789 \\ 
-            学生姓名：& 某某人 &
-            指导教师：& 某某人
-        \end{tabular} 
+    \textbf{NANCHANG\quad UNIVERSITY}
 
-        \quad{} \\ 
-        \centering
-        \abszhname{摘\quad{}要}
-    \end{spacing}
+    \covernamefont{\enskip 学\enskip 士\enskip 学\enskip 位\enskip 论\enskip 文}
 
+    \vspace{9pt}\coverennamefont{\enskip THESIS\quad OF\quad BACHELOR}
 
-    \xiaosanhao\quad{}
+    \vspace{7pt} \coveryearfont（20  —20  年）
 
-    \normalsize
-{
-这是中文摘要的部分。
+    \quad\\
+    \vspace{7pt}\includegraphics[height=4.02cm, width=4.02cm]{pictures/NCU_sign}
+
+    \vfill
+    \covertitlefont 题\hspace{1.5em}目\underline{\makebox[22em]{这只是一个论文标题而已}}
+\end{spacing}
+\begin{spacing}{2.15}
+    \coveritemsfont\vspace{22pt}
+    \begin{center}
+        学\qquad 院：\underline{\makebox[8em]{XX学院}}\nobreak 系\underline{\makebox[8em]{XX}}\\
+        专业班级：\underline{\makebox[17em]{XXXXX}}\\
+        学生姓名：\underline{\makebox[7.5em]{李田所}}\nobreak 学号：\underline{\makebox[6.5em]{1145141919}}\\
+        指导老师：\underline{\makebox[7.5em]{张三浦}}\nobreak 职称：\underline{\makebox[6.5em]{教授}}\\
+        起讫日期：\underline{\makebox[17em]{}}\\
+    \end{center}
+\end{spacing}
+
+% Credit state %
+% Print, handwriting and scan to replace this pdf
+\clearpage
+\includepdf[]{Credit}
+
+\frontmatter
+\setcounter{page}{1}
+
+% 中文摘要 %
+\clearpage
+\markboth{摘要}{}
+\phantomsection\addcontentsline{toc}{chapter}{摘要}
+{\centering
+    % 如果你的标题太长，可能会换行；如果你对换行位置不满意，请调节下面第一个{}的参数
+    \parbox[c]{.75\textwidth}{\thesistitlefont{这只是另一个论文标题而已}} \\
+
+    \wuhao\vspace{7.7pt}   % lineskip
+    \begin{tabular}{clcl} 
+        专 \qquad 业：& 软件工程 &
+        学 \qquad 号：& 0123456789 \\ 
+        学生姓名：& 某某人 &
+        指导教师：& 某某人
+    \end{tabular}
+
+    \abszhname 摘要 \\
+}
+
+\normalsize{
+这是中文摘要的部分。这是中文摘要的部分。
 
 它可以拥有多段。
-这是中文摘要的部分。
 
 它可以拥有多段。
 
 如果你写的太长，甚至可以到第二页。
 }
-    
-
-    \quad{}
-
-    \par\noindent\abszhkey{关键词：}
-    \abszhkeys{
-    关键词1；
-    关键词2；
-    关键词3；
-    关键词4；
-    关键词5}
+\par\noindent\abszhkey{关键词：}
+\abszhkeys{
+关键词1；
+关键词2；
+关键词3；
+关键词4；
+关键词5
+}
 
 
-% Abstract
-    \clearpage\phantomsection\addcontentsline{toc}{chapter}{Abstract}
-	\thispagestyle{empty}
-    \begin{spacing}{1.05}
-        \centering
-        % 如果你的标题太长，可能会换行；如果你对换行位置不满意，请调节下面第一个{}的参数
-        \parbox[c]{.75\textwidth}{\thesistitleenfont{Just another title}
-        }
-    \end{spacing}
+% Abstract %
+\clearpage
+\markboth{Abstract}{}
+\phantomsection\addcontentsline{toc}{chapter}{Abstract}
+{\centering
+    % 如果你的标题太长，可能会换行；如果你对换行位置不满意，请调节下面第一个{}的参数
+    \parbox[c]{.75\textwidth}{\thesistitleenfont{Just another title}} \\
 
-    \begin{spacing}{1.5}
-        \centering
-        \sanhao\quad{} \\ 
-        \abszhname{Abstract} \\ 
-    \end{spacing}
-    \xiaosanhao\quad{}
-    \normalsize
-
-{
-This is ABSTRACT.
+    \vspace{.7pt}\absenname{Abstract} \\ 
+}
+\normalsize{
+This is ABSTRACT. This is ABSTRACT. This is ABSTRACT.
 
 You can write more than one paragraph here.
 
 If your abstract is too long, it will take up more pages. 
 }
-    
+\par\noindent\absenkey{Keyword:}
+\absenkeys{
+KeyWord1；
+KeyWord2；
+KeyWord3；
+KeyWord4；
+KeyWord5
+}%
 
-    \par\noindent\absenkey{Keyword:}\quad{}%
-    \absenkeys{
-    KeyWord1；
-    KeyWord2；
-    KeyWord3；
-    KeyWord4；
-    KeyWord5
-    }%
-
-\end{titlepage}
-
-
-\tableofcontents % Content
-\thispagestyle{empty}
+% Content %
+\clearpage
+\fancypagestyle{plain}{\pagestyle{contents}}
+\pagestyle{plain}
+\tableofcontents
 
 % FIXME: 去除目录页页码
+\end{titlepage}
 
 % 正文
 \pagenumbering{arabic}
 \newpage\mainmatter
-\fancypagestyle{plain}{\pagestyle{mainmatter}}
+% \fancypagestyle{plain}{\pagestyle{mainmatter}}
 %\let\cleardoublepagebak=\cleardoublepage
 %\let\cleardoublepage\relax % Make new chapter stay on old page
 
@@ -275,14 +286,14 @@ If your abstract is too long, it will take up more pages.
 
 由于$\bm{X}\bm{X}^ \mathrm{ T }$是协方差矩阵，那么只需对它做特征值分解，即
 \begin{equation}
-\label{PCA_eigenvalue}
-\bm{X}^ \mathrm{ T }\bm{X} = \bm{W}\bm{\Lambda}\bm{W}^ \mathrm{ T } \\
+    \label{PCA_eigenvalue}
+    \bm{X}^ \mathrm{ T }\bm{X} = \bm{W}\bm{\Lambda}\bm{W}^ \mathrm{ T }
 \end{equation}
 其中$\bm{\Lambda}=diag(\bm{\lambda})$，$\bm{\lambda} = \{\lambda_1,\lambda_2,\ldots,\lambda_m\}$。
 
 具体地，考虑到它是半正定矩阵的二次型，存在最大值，可对\eqref{PCA_goal_TMP}使用拉格朗日乘数法
 \begin{equation}
-\bm{X}\bm{X}^ \mathrm{ T }\bm{w}_i  = \lambda_i \bm{w}_i \\
+\bm{X}\bm{X}^ \mathrm{ T }\bm{w}_i  = \lambda_i \bm{w}_i
 \end{equation}
 
 之后将求得的特征值降序排列，取前$d^\prime$个特征值对应的特征向量组成所需的投影矩阵$\bm{W}^\prime =(\bm{w}_1,\bm{w}_2,\ldots,\bm{w}_{d^\prime})$，即可得到PCA的解。PCA算法的描述如算法\ref{PCA_algorithm}所示。
@@ -385,8 +396,10 @@ def plusFunc(a, b):
 \section{不要觉得我对别人要求太高，对自己太低}
 \section{我对自己要求低的话也不至于想要修订这份模板}
 
-\clearpage\phantomsection\addcontentsline{toc}{chapter}{结\qquad{}论}
-\chapter*{结\qquad{}论}
+\backmatter
+\phantomsection\addcontentsline{toc}{chapter}{结\qquad{}论}
+\markboth{结论}{}
+\chapter*{结论}
 \normalsize
 
 结论
@@ -398,10 +411,12 @@ def plusFunc(a, b):
 \clearpage\phantomsection\addcontentsline{toc}{chapter}{参考文献（References）}
 \bibliographystyle{buptbachelor}
 \refbodyfont{\bibliography{ref}}
+\markboth{参考文献}{}
 
 % Thanks to page
 \clearpage\phantomsection\addcontentsline{toc}{chapter}{致\qquad{}谢}
-\chapter*{致\qquad{}谢}
+\markboth{致谢}{}
+\chapter*{致谢}
 \normalsize
 
 {
@@ -422,7 +437,8 @@ def plusFunc(a, b):
 \makeatother
 
 
-\chapter*{附\qquad{}录}
+\chapter*{附录}
+\markboth{附录}{}
 \phantomsection\addcontentsline{toc}{chapter}{附\qquad{}录}
 
 \phantomsection

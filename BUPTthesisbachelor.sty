@@ -51,36 +51,39 @@
 
 % Serveral Font pre-setting
 \newcommand{\thesistitlefont}{\centering\songti\xiaoerhao\textbf} %论文题目的字体
-\newcommand{\thesistitleenfont}{\centering\xiaoerhao\bf}     %论文英文题目的字体
-\newcommand{\covernamefont}{\heiti\yihao\bf}    % 封面上“本科论文”字样的字体
-\newcommand{\coveritemsfont}{\songti\sanhao\bf} % 封面上姓名等条目的字体
-\newcommand{\coverdatefont}{\songti\sanhao\bf}  % 封面上的日期的字体
+\newcommand{\thesistitleenfont}{\centering\xiaoerhao\textbf}     %论文英文题目的字体
+\newcommand{\covercredentialfont}{\songti\sihao}    % 封面上密级的字体
+\newcommand{\covernamefont}{\songti\fontsize{30}{39}\selectfont\textbf}    % 封面上“本科论文”字样的字体
+\newcommand{\coverennamefont}{\sihao\textbf}    % 封面上“THESIS OF BACHELOR”字样的字体
+\newcommand{\coveryearfont}{\songti\sihao}  % 封面上的年份的字体
+\newcommand{\covertitlefont}{\songti\sanhao}   % 封面标题字体
+\newcommand{\coveritemsfont}{\songti\sihao} % 封面上姓名等条目的字体
 \newcommand{\statetitlefirst}{\songti\xiaosanhao\bf}   %诚信声明标题第一行的字体
 \newcommand{\statetitlesecond}{\songti\xiaosanhao\bf}  %诚信声明标题第二行的字体
 \newcommand{\abszhname}{\songti\sihao}         % 中文“摘要”字样的字体
 \newcommand{\abszhkey}{\songti\xiaosihao\textbf}       % 中文摘要“关键字”字样的字体
 \newcommand{\abszhkeys}{\songti\xiaosihao\normalfont} % 中文摘要关键字的字体
-\newcommand{\absenname}{\xiaosanhao\textbf}               % 英文``Abstract''字样的字体
+\newcommand{\absenname}{\sihao}               % 英文``Abstract''字样的字体
 \newcommand{\absenkey}{\xiaosihao\textbf}                 % 英文``KEY WORDS''字样的字体
 \newcommand{\absenkeys}{\xiaosihao\normalfont}        % 英文关键字的字体
-\newcommand{\headfont}{\songti\xiaowuhao\normalfont}             % 页眉字体
-\newcommand{\toctitlefont}{\heiti\sanhao\textbf}            % “目录”字样的字体
+\newcommand{\headfont}{\songti\wuhao\normalfont}             % 页眉字体
+\newcommand{\toctitlefont}{\songti\xiaosanhao\bfseries}            % “目录”字样的字体
 \newcommand{\tocchapterfont}{\songti\xiaosihao\normalfont} % 目录上第X章的字体
 \newcommand{\tocsectionfont}{\songti\xiaosihao\normalfont}         % 目录上X.Y节的字体
 \newcommand{\tocsubsectionfont}{\songti\xiaosihao\normalfont}      % 目录上X.Y.Z小节的字体
 \newcommand{\tocsubsubsectionfont}{\songti\xiaosihao\normalfont}      % 目录上X.Y.Z.A小节的字体
-\newcommand{\textchapterfont}{\centering\songti\sihao\bfseries} % 正文上第X章的字体
-\newcommand{\textsectionfont}{\songti\sihao\bfseries}            % 正文上X.Y节的字体
-\newcommand{\textsubsectionfont}{\songti\sihao\bfseries}     % 正文上X.Y.Z小节的字体
-\newcommand{\textsubsubsectionfont}{\songti\sihao\bfseries}     % 正文上X.Y.Z.A小节的字体
+\newcommand{\textchapterfont}{\centering\songti\sihao\normalfont} % 正文上第X章的字体
+\newcommand{\textsectionfont}{\songti\sihao\normalfont}            % 正文上X.Y节的字体
+\newcommand{\textsubsectionfont}{\songti\sihao\normalfont}     % 正文上X.Y.Z小节的字体
+\newcommand{\textsubsubsectionfont}{\songti\sihao\normalfont}     % 正文上X.Y.Z.A小节的字体
 \newcommand{\footnotefont}{\songti\xiaowuhao\normalfont}     % 脚注字体
 %\newcommand{\ftcaptionfont}{\kaishu\wuhao\normalfont}         % 图表标题的字体
-\newcommand{\ftcaptionfont}{\kaishu\wuhao}         % 图表标题的字体
-\newcommand{\reftitlefont}{\heiti\sanhao\textbf}      % “参考文献”字样的字体
-\newcommand{\refbodyfont}{\songti\wuhao\normalfont}          % 参考文献字体
-\newcommand{\thanktitlefont}{\heiti\sanhao\textbf}    % “致谢”字样的字体
-\newcommand{\appendixtitlefont}{\heiti\sanhao\textbf} % “附录”字样的字体
-\newcommand{\translationtitlefont}{\heiti\sanhao} % “外文译文”字样的字体
+\newcommand{\ftcaptionfont}{\songti\wuhao\bfseries}         % 图表标题的字体
+\newcommand{\reftitlefont}{\centering\songti\sihao\normalfont}      % “参考文献”字样的字体
+\newcommand{\refbodyfont}{\songti\xiaosihao\normalfont}          % 参考文献字体
+\newcommand{\thanktitlefont}{\centering\songti\sihao\normalfont}    % “致谢”字样的字体
+\newcommand{\appendixtitlefont}{\centering\songti\sihao\normalfont} % “附录”字样的字体
+\newcommand{\translationtitlefont}{\centering\songti\sihao\normalfont} % “外文译文”字样的字体
 
 % Word spacing
 % Usage: \ziju{spacing} spacing can be 1em, 10pt, etc.
@@ -91,24 +94,55 @@
 % Margin
 % FIXME: Not very precise, but meets the need of the Word template.
 % \usepackage[left=2.5cm,margin=2.5cm,headheight=1.5cm,footskip=1.5cm]{geometry}
-\usepackage[left=3.67cm,right=2.67cm,top=2.54cm,bottom=2.54cm,headheight=1.5cm,headsep=0.6cm,footskip=0.5cm,textwidth=16cm,textheight=24.7cm]{geometry}
+\usepackage[left=3.67cm,right=2.67cm,top=2.54cm,bottom=2.54cm,headheight=1.5cm,headsep=0.6cm,footskip=0.75cm,textwidth=16cm,textheight=24.7cm]{geometry}
 
 
 % Header and footer
 \usepackage{fancyhdr}
 
+\renewcommand{\chaptermark}[1]{\markboth{第\chinese{chapter}章\quad {#1}}{}}
 \fancypagestyle{mainmatter}{%
 \fancyhf{} % clear all header and footer fields
 % \fancyhead[C]{\headfont{北京邮电大学本科毕业设计(论文)}}
 \fancyfoot[C]{\footnotefont{\thepage}}
-\renewcommand{\headrulewidth}{0.8pt}
+\fancyhead[C]{\headfont{\leftmark}}
+\renewcommand{\headrulewidth}{0.3pt}
+}
+
+\fancypagestyle{abszh}{%
+\fancyhf{} % clear all header and footer fields
+% \fancyhead[C]{\headfont{北京邮电大学本科毕业设计(论文)}}
+\fancyfoot[C]{\footnotefont{\thepage}}
+\fancyhead[C]{\headfont{摘要}}
+\renewcommand{\headrulewidth}{0.3pt}
+}
+
+\fancypagestyle{absen}{%
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[C]{\footnotefont{\thepage}}
+\fancyhead[C]{\headfont{Abstract}}
+\renewcommand{\headrulewidth}{0.3pt}
+}
+
+\fancypagestyle{contents}{%
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[C]{\footnotefont{\thepage}}
+\fancyhead[C]{\headfont{目录}}
+\renewcommand{\headrulewidth}{0.3pt}
+}
+
+\fancypagestyle{backmatter}{
+    \fancyhf{} % clear all header and footer fields
+    \fancyfoot[C]{\footnotefont{\thepage}}
+    \fancyhead[C]{\headfont{\leftmark}}
+    \renewcommand{\headrulewidth}{0.3pt}
 }
 
 \fancypagestyle{frontmatter}{%
-\fancyhf{} % clear all header and footer fields
-\fancyhead{}
-\fancyfoot[C]{\footnotefont{\thepage}} % except the center
-\renewcommand{\headrulewidth}{0pt}
+    \fancyhf{} % clear all header and footer fields
+    \fancyfoot[C]{\footnotefont{\thepage}} % except the center
+    \fancyhead[C]{\headfont{\leftmark}}
+    \renewcommand{\headrulewidth}{0.3pt}
 }
 
 % Bookmark  (Chinese bookmark supported)
@@ -177,7 +211,7 @@ pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
 \setcounter{secnumdepth}{3} % let subsubsection have number
 \setcounter{tocdepth}{3} % let subsubsection appear in CONTENTS
 \usepackage{titletoc}
-\renewcommand\contentsname{\centerline{\toctitlefont{目\qquad{}录}}}
+\renewcommand\contentsname{\centerline{\toctitlefont{目录}}}
 \titlecontents{chapter}[0em]{\tocchapterfont\vspace{0.4mm}}
     {\CTEXnumber{\CJKsection}{\thecontentslabel}{第\CJKsection{章}\quad{}}}
     {}
@@ -192,12 +226,14 @@ pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
     \thecontentslabel\quad{}}{}{%
     \hspace{.5em}\titlerule*[6pt]{$\cdot$}\contentspage}%
 \makeatletter % Content Page style
+
 \renewcommand\frontmatter{%
     \if@openright\cleardoublepage\else\clearpage\fi%
     \@mainmatterfalse%
     \pagenumbering{Roman}% Roman style page number
-    \pagestyle{frontmatter}
-    }
+    \fancypagestyle{plain}{\pagestyle{frontmatter}}
+    \pagestyle{plain}
+}
 \makeatother%
 
 \makeatletter % Content Page style
@@ -205,22 +241,24 @@ pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
     \if@openright\cleardoublepage\else\clearpage\fi%
     \@mainmattertrue%
     \pagenumbering{arabic}% Roman style page number
-    \pagestyle{mainmatter}
-    }
+    \fancypagestyle{plain}{\pagestyle{mainmatter}}
+    \pagestyle{plain}
+}
 \makeatother%
 
 \makeatletter % Translation Page style
 \renewcommand\backmatter{%
     \if@openright\cleardoublepage\else\clearpage\fi%
     \@mainmatterfalse%
-    \pagestyle{empty}
+    \fancypagestyle{plain}{\pagestyle{backmatter}}
+    \pagestyle{plain}
 }
 \makeatother%
 
 % Text style
 \usepackage{titlesec}
-\titleformat{\chapter}[hang]{\textchapterfont}{第\chinese{chapter}章}{1em}{}
-\titlespacing{\chapter}{0pt}{-1ex plus .2ex minus .2ex}{-1ex plus .2ex minus .2ex} % 缩短章节标题的上边距
+\titleformat{\chapter}[block]{\textchapterfont}{第\chinese{chapter}章}{1em}{}
+\titlespacing{\chapter}{0pt}{-1em plus .2ex minus .2ex}{1em} % 缩短章节标题的上边距 
 \titleformat{\section}{\textsectionfont}{\thesection}{1em}{}
 \titleformat{\subsection}{\textsubsectionfont}{\qquad{}\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\textsubsubsectionfont}{\qquad{}\thesubsubsection}{1em}{}
@@ -229,7 +267,7 @@ pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
 % \usepackage[numbers,sort&compress]{natbib}
 \usepackage[super,numbers,sort&compress]{natbib}
 %\usepackage[backend=biber,texencoding=utf8,bibencoding=utf8]{biblatex}
-\renewcommand\bibname{\centerline{\reftitlefont{参考文献}}}
+\renewcommand\bibname{\centerline{\reftitlefont{参考文献（References）}}}
 %\renewcommand{\citet}[1]{\textsuperscript{\cite{#1}}}
 \setcitestyle{square}
 \setlength{\bibsep}{0.2em}
